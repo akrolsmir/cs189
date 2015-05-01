@@ -3,3 +3,4 @@ data/
 hw5/spam-dataset/
 .ipynb_checkpoints/
 .DS_Store
+*_data/
