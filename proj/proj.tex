@@ -90,8 +90,8 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{proj}
-    
+    \title{Predicting Anime Ratings: Linear Regression vs.~Neural Nets}
+    \author{Austin Chen}
     
     
 
@@ -108,66 +108,66 @@
     \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
 \def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
 
-\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
-\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
-\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
-\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
-\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
-\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
 \expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
-\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
 \expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
-\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
-\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
 \expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
 \expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
 
 \def\PYZbs{\char`\\}
 \def\PYZus{\char`\_}
@@ -222,362 +222,174 @@
     
 
     
-    \section{Predicting Anime Ratings: Linear Regression vs.~Neural
-Nets}\label{predicting-anime-ratings-linear-regression-vs.neural-nets}
 
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Name: Austin Chen
-\item
-  SID: 23826762
-\item
-  Repro: Open up proj.ipynb in IPython Notebook.
-\end{itemize}
-
-The goal of my 289 project is to analyze and predict what makes for a
-good anime, by drawing on hundreds of thousands of user votes. Just like
-movies, TV shows, and other forms of media, anime can be categorized
-into different genres. In addition, there are many common themes found
-in anime, some of which are quite unique to the medium (for example,
+Just like movies, TV shows, and other forms of media, anime can be
+categorized into different genres: sci-fi, mystery, romance, etc. In
+addition, there are many common themes found in anime, some of which are
+quite unique to the medium (e.g.
 \href{http://tvtropes.org/pmwiki/pmwiki.php/Main/MagicalGirl}{magical
-girls}). I'll be leveraging linear regression and neural networks as two
-different ways to predict anime scores.
+girls}). My project leverages linear regression and neural networks as
+two different ways to predict anime ratings from these genres and
+themes. By drawing on hundreds of thousands of votes from users, I aim
+to quantify exactly what makes an anime ``good''.
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}254}]:} \PY{o}{\PYZpc{}}\PY{k}{matplotlib} \PY{n}{inline}
-          \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
-          \PY{k+kn}{import} \PY{n+nn}{xml.etree.ElementTree} \PY{k+kn}{as} \PY{n+nn}{ET}
-          \PY{k+kn}{import} \PY{n+nn}{urllib.request}
-          \PY{k+kn}{import} \PY{n+nn}{time}
-          \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
-          \PY{k+kn}{import} \PY{n+nn}{collections}
-          \PY{k+kn}{import} \PY{n+nn}{random}
-\end{Verbatim}
+    
 
-    \subsection{Featurizing}\label{featurizing}
+    \section{Featurizing}\label{featurizing}
 
 For each anime, I included as features: the number of votes, the number
 of views, and a binary indicator for each of the genres and the 50 most
-common themes. These were used to predict anime ratings, which were
-provided as averages across a 10-point scale.
+common themes. These are used to regress against anime ratings, which
+are provided as averages across a 10-point scale.
 
-Example genres included action, adventure, and comedy; example themes
-include aliens, assassins, and
+Some example genres are action, adventure, and comedy; example themes
+are aliens, assassins, and
 \href{http://tvtropes.org/pmwiki/pmwiki.php/Main/Bishonen}{bishounen}.
 
 All anime data was made available courtesy of
 \href{http://www.animenewsnetwork.com/encyclopedia/api.php}{Anime News
 Network}.
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}}]:} \PY{c}{\PYZsh{} Download the list of all anime, sorted by ratings}
-       \PY{n}{urllib}\PY{o}{.}\PY{n}{request}\PY{o}{.}\PY{n}{urlretrieve}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{http://www.animenewsnetwork.com/encyclopedia/reports.xml?id=172\PYZam{}nlist=all}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{anime\PYZus{}by\PYZus{}ratings.xml}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-       \PY{n}{tree} \PY{o}{=} \PY{n}{ET}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{anime\PYZus{}by\PYZus{}ratings.xml}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-       \PY{n}{root} \PY{o}{=} \PY{n}{tree}\PY{o}{.}\PY{n}{getroot}\PY{p}{(}\PY{p}{)}
-       
-       \PY{c}{\PYZsh{} Download details for blocks of 40 anime at a time}
-       \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4680}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{)}\PY{p}{:}
-           \PY{k}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
-           \PY{n}{ids} \PY{o}{=} \PY{p}{[}\PY{n}{item}\PY{o}{.}\PY{n}{attrib}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{id}\PY{l+s}{\PYZsq{}}\PY{p}{]} \PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{root}\PY{p}{[}\PY{n}{i}\PY{p}{:}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{40}\PY{p}{]}\PY{p}{]}
-           \PY{n}{query} \PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{http://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=}\PY{l+s}{\PYZsq{}} \PY{o}{+} \PY{l+s}{\PYZsq{}}\PY{l+s}{/}\PY{l+s}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{ids}\PY{p}{)}
-           \PY{n}{urllib}\PY{o}{.}\PY{n}{request}\PY{o}{.}\PY{n}{urlretrieve}\PY{p}{(}\PY{n}{query}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{anime/\PYZob{}0\PYZcb{}.xml}\PY{l+s}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{p}{)}
-           \PY{n}{time}\PY{o}{.}\PY{n}{sleep}\PY{p}{(}\PY{l+m+mi}{60}\PY{p}{)}
-\end{Verbatim}
+    
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}353}]:} \PY{c}{\PYZsh{} nb\PYZus{}votes, nb\PYZus{}seen, genres, themes}
-          \PY{c}{\PYZsh{} TODO Maybe add: \PYZsh{} episodes? running time? animation studio/prodcution? year?}
-          
-          \PY{n}{animes}\PY{p}{,} \PY{n}{scores} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{4679}\PY{p}{,} \PY{l+m+mi}{68}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{n+nb}{int}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{l+m+mi}{4679}\PY{p}{)}
-          \PY{k}{for} \PY{n}{i}\PY{p}{,} \PY{n}{item} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{root}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{4679}\PY{p}{]}\PY{p}{)}\PY{p}{:}
-              \PY{n}{votes} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{item}\PY{o}{.}\PY{n}{find}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{nb\PYZus{}votes}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{text}\PY{p}{)}
-              \PY{n}{seen} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{item}\PY{o}{.}\PY{n}{find}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{nb\PYZus{}seen}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{text}\PY{p}{)}
-              \PY{n}{average} \PY{o}{=} \PY{n+nb}{float}\PY{p}{(}\PY{n}{item}\PY{o}{.}\PY{n}{find}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{weighted\PYZus{}average}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{text}\PY{p}{)}
-              
-              \PY{n}{animes}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{n}{votes}\PY{p}{,} \PY{n}{seen}\PY{p}{]}\PY{p}{)}
-              \PY{n}{scores}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{n}{average}
-\end{Verbatim}
+    
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}199}]:} \PY{c}{\PYZsh{} Count occurences of genres and themes}
-          \PY{n}{themes}\PY{p}{,} \PY{n}{genres} \PY{o}{=} \PY{n}{collections}\PY{o}{.}\PY{n}{Counter}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{collections}\PY{o}{.}\PY{n}{Counter}\PY{p}{(}\PY{p}{)}
-          \PY{k}{for} \PY{n}{index} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4680}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{)}\PY{p}{:}
-              \PY{n}{ann} \PY{o}{=} \PY{n}{ET}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{anime/\PYZob{}0\PYZcb{}.xml}\PY{l+s}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{index}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{getroot}\PY{p}{(}\PY{p}{)}
-              \PY{n}{genres}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{n}{genre}\PY{o}{.}\PY{n}{text}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{genre} \PY{o+ow}{in} \PY{n}{ann}\PY{o}{.}\PY{n}{findall}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{./*/info[@type=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Genres}\PY{l+s}{\PYZsq{}}\PY{l+s}{]}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
-              \PY{n}{themes}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{n}{theme}\PY{o}{.}\PY{n}{text}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{theme} \PY{o+ow}{in} \PY{n}{ann}\PY{o}{.}\PY{n}{findall}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{./*/info[@type=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Themes}\PY{l+s}{\PYZsq{}}\PY{l+s}{]}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
-          
-          
-          \PY{c}{\PYZsh{} Choose most common genres and themes as features}
-          \PY{n}{all\PYZus{}themes} \PY{o}{=} \PY{n+nb}{sorted}\PY{p}{(}\PY{p}{[}\PY{n}{theme} \PY{k}{for} \PY{n}{theme}\PY{p}{,} \PY{n}{count} \PY{o+ow}{in} \PY{n}{themes}\PY{o}{.}\PY{n}{most\PYZus{}common}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}\PY{p}{]}\PY{p}{)}
-          \PY{n}{all\PYZus{}genres} \PY{o}{=} \PY{n+nb}{sorted}\PY{p}{(}\PY{p}{[}\PY{n}{genre} \PY{k}{for} \PY{n}{genre}\PY{p}{,} \PY{n}{count} \PY{o+ow}{in} \PY{n}{genres}\PY{o}{.}\PY{n}{most\PYZus{}common}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{]}\PY{p}{)}
-          
-          \PY{k}{def} \PY{n+nf}{featurize}\PY{p}{(}\PY{n}{features}\PY{p}{,} \PY{n}{all\PYZus{}features}\PY{p}{)}\PY{p}{:}
-              \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1} \PY{k}{if} \PY{n}{a} \PY{o+ow}{in} \PY{n}{features} \PY{k}{else} \PY{l+m+mi}{0} \PY{k}{for} \PY{n}{a} \PY{o+ow}{in} \PY{n}{all\PYZus{}features}\PY{p}{]}\PY{p}{)}
-\end{Verbatim}
+    
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}355}]:} \PY{k}{for} \PY{n}{index} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4680}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{)}\PY{p}{:}
-              \PY{n}{ann} \PY{o}{=} \PY{n}{ET}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{anime/\PYZob{}0\PYZcb{}.xml}\PY{l+s}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{index}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{getroot}\PY{p}{(}\PY{p}{)}
-              \PY{k}{for} \PY{n}{offset}\PY{p}{,} \PY{n}{anime} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{ann}\PY{p}{)}\PY{p}{:}
-                  \PY{n}{i} \PY{o}{=} \PY{n}{index} \PY{o}{+} \PY{n}{offset}
-                  \PY{k}{if} \PY{n}{i} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{4679}\PY{p}{:}
-                      \PY{k}{break}
-                  
-                  \PY{c}{\PYZsh{} Build data matrix}
-                  \PY{n}{g} \PY{o}{=} \PY{p}{[}\PY{n}{genre}\PY{o}{.}\PY{n}{text}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{genre} \PY{o+ow}{in} \PY{n}{anime}\PY{o}{.}\PY{n}{findall}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{./info[@type=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Genres}\PY{l+s}{\PYZsq{}}\PY{l+s}{]}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{]}
-                  \PY{n}{animes}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{18}\PY{p}{]} \PY{o}{=} \PY{n}{featurize}\PY{p}{(}\PY{n}{g}\PY{p}{,} \PY{n}{all\PYZus{}genres}\PY{p}{)}
-                  
-                  \PY{n}{t} \PY{o}{=} \PY{p}{[}\PY{n}{theme}\PY{o}{.}\PY{n}{text}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{theme} \PY{o+ow}{in} \PY{n}{anime}\PY{o}{.}\PY{n}{findall}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{./info[@type=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Themes}\PY{l+s}{\PYZsq{}}\PY{l+s}{]}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{]}
-                  \PY{n}{animes}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{18}\PY{p}{:}\PY{l+m+mi}{68}\PY{p}{]} \PY{o}{=} \PY{n}{featurize}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{all\PYZus{}themes}\PY{p}{)}
-\end{Verbatim}
+    
 
-    \subsection{Linear Regression}\label{linear-regression}
+    \section{Linear Regression}\label{linear-regression}
 
-Linear regression on the average user rating for each anime provided a
-baseline prediction strategy, which had rather large errors (between -2
-and 2 on a 10 point scale). However, it was quite useful for drawing
-human-interpretable conclusions for the various effects of the different
-features.
+Linear regression on the average user rating for each anime provides a
+baseline prediction strategy, with rather large errors (between -2 and 2
+on a 10 point scale). However, it lends itself to clean interpretations
+for the various effects of different features. Each entry in the weight
+vector describes how much the presence of a particular genre or theme
+affects the rating.
 
-Genres that were highly rated included drama, thriller, slice of life,
-and mystery, and highly rated themes included aliens, space, sports, and
-crime. Meanwhile, erotica and horror were heavily penalized as genres,
-as were the themes of male harem, samurai, and shounen-ai.
+Genres that are highly rated include drama, thriller, slice of life, and
+mystery, and highly rated themes included superpowers, space, and
+\href{http://tvtropes.org/pmwiki/pmwiki.php/Main/RealRobotGenre}{real
+robots}. Meanwhile, erotica and horror are heavily penalized as genres,
+as are the themes of male harem and samurai.
 
-Interestingly, while the rating was positively correlated with the
-number of votes, it was negatively correlated with the number of views,
-leading to the tentative conclusion is that popular anime is terrible.
+Interestingly, while anime ratings are positively correlated with the
+number of votes, they are negatively correlated with the number of
+views, leading to the tentative conclusion is that popular anime is bad.
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}360}]:} \PY{c}{\PYZsh{} Regress scores based on anime information}
-          
-          \PY{c}{\PYZsh{} Introduce extra row for constant term}
-          \PY{n}{X} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{hstack}\PY{p}{(}\PY{p}{(}\PY{n}{animes}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{animes}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-          \PY{n}{y} \PY{o}{=} \PY{n}{scores}
-          
-          \PY{c}{\PYZsh{} Solve for B, the weights vector}
-          \PY{n}{B} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linalg}\PY{o}{.}\PY{n}{solve}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{X}\PY{o}{.}\PY{n}{T}\PY{p}{,} \PY{n}{X}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{X}\PY{o}{.}\PY{n}{T}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{)}
-\end{Verbatim}
+\pagebreak
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}396}]:} \PY{k}{print}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{B0 (the constant term) is}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{B}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-          
-          \PY{c}{\PYZsh{} Plot the various weights used in regression}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Other}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{yaxis} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{B}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{1000}\PY{p}{,} \PY{n}{yaxis}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{ro}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{yticks}\PY{p}{(}\PY{n}{yaxis}\PY{p}{,} \PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{1000 Votes}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{1000 Seen}\PY{l+s}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{margins}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{gcf}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{set\PYZus{}size\PYZus{}inches}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mf}{0.6}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Genres}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{yaxis} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{16}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{Bm}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{18}\PY{p}{]}\PY{p}{,} \PY{n}{yaxis}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{o}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{yticks}\PY{p}{(}\PY{n}{yaxis}\PY{p}{,} \PY{n}{all\PYZus{}genres}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Themes}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{yaxis} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{B}\PY{p}{[}\PY{l+m+mi}{18}\PY{p}{:}\PY{l+m+mi}{68}\PY{p}{]}\PY{p}{,} \PY{n}{yaxis}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{go}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{yticks}\PY{p}{(}\PY{n}{yaxis}\PY{p}{,} \PY{n}{all\PYZus{}themes}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{gcf}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{set\PYZus{}size\PYZus{}inches}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{12}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-B0 (the constant term) is 6.53347904931
-    \end{Verbatim}
+\subsection{Linear Regression Weights}\label{Linear Regression Weights}
+    
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_9_1.png}
+    \adjustimage{max size={0.7\linewidth}{0.7\paperheight}}{proj_files/proj_9_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_9_2.png}
+    \adjustimage{max size={0.7\linewidth}{0.7\paperheight}}{proj_files/proj_9_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_9_3.png}
+    \adjustimage{max size={0.7\linewidth}{0.7\paperheight}}{proj_files/proj_9_3.png}
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}387}]:} \PY{n}{predictions} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{B}\PY{p}{)}
-          
-          \PY{c}{\PYZsh{} Some interesting visualizations}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions vs Actual Scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{predictions}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{b,}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Actual scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Distributions of Scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{predictions}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Actual scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{upper left}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Distribution of Errors}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{predictions} \PY{o}{\PYZhy{}} \PY{n}{y}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Deviation from predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
+\pagebreak
+
+\subsection{Linear Regression Analysis}\label{Linear Regression Analysis}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_10_0.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_10_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_10_1.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_10_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_10_2.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_10_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+\pagebreak
+    
+\section{Filtering}\label{filtering}
+
+While plotting predicted scores vs actual scores, I noticed that an
+abnormally large number of anime were being predicted as 6.0. This
+anomaly was caused by unpopular/niche anime not having any appropriate
+features to distinguish them from others. I controlled for this anomaly
+by filtering out anime with very few (less than 50) votes.
+
+\paragraph{Before}\label{before}
+
+    \begin{center}
+    \adjustimage{max size={0.6\linewidth}{0.6\paperheight}}{proj_files/before.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+\paragraph{After}\label{after}
+
+    \begin{center}
+    \adjustimage{max size={0.6\linewidth}{0.6\paperheight}}{proj_files/after.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+
+    
+\pagebreak
+    
+
+    \section{Neural Nets}\label{neural-nets}
+
+Neural networks provide better predictions than linear regression. I
+used a neural net with 1 hidden layer of 40 nodes with an activation of
+tanh, and 1 output node with no activation function. After one million
+training iterations, it had a residual sum of squares of 841.9, compared
+to 1914.2 for linear regression. The distribution of scores predicted by
+the neural net much more closely matches the distribution of actual
+scores, and the errors are more concentrated (standard deviation of 0.50
+as opposed to 0.75). Unfortunately, the neural net obscures insights
+into the effects of particular features upon anime ratings.
+
+Some hyperparameters I experimented with to adjust neural net
+performance included the number of nodes in the hidden layer as well as
+the step size for the stochastic gradient descent.
+
+    
+
+    
+
+    \begin{center}
+    \adjustimage{max size={0.6\linewidth}{0.6\paperheight}}{proj_files/proj_14_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}341}]:} \PY{c}{\PYZsh{} Calculate regression sum of squares}
-          \PY{n}{RSS} \PY{o}{=} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{B}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{y}\PY{p}{)} \PY{o}{*}\PY{o}{*} \PY{l+m+mi}{2}\PY{p}{)}
-          \PY{k}{print}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{RSS is}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{RSS}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-RSS is 3027.11535137
-    \end{Verbatim}
-
-    \subsection{Neural Nets}\label{neural-nets}
-
-Neural networks proved to provide better predictions. I used a neural
-net with 1 hidden layer with an activation of tanh, and 1 output node
-with no activation function. Over 1 million training iterations, it had
-a regression sum of squares of 1790, com
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}381}]:} \PY{k}{class} \PY{n+nc}{NeuralNet}\PY{p}{(}\PY{n+nb}{object}\PY{p}{)}\PY{p}{:}
-              \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
-                  \PY{n}{e} \PY{o}{=} \PY{l+m+mi}{10}\PY{o}{*}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}
-                  \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{e}\PY{p}{,} \PY{p}{(}\PY{l+m+mi}{69}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{)}\PY{p}{)}
-                  \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{e}\PY{p}{,} \PY{p}{(}\PY{l+m+mi}{41}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
-              
-              \PY{k}{def} \PY{n+nf}{forward}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{:}
-                  \PY{n}{a2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{tanh}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1}\PY{p}{)}\PY{p}{)}
-                  \PY{n}{a2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{c\PYZus{}}\PY{p}{[}\PY{n}{a2}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a2}\PY{p}{)}\PY{p}{)}\PY{p}{]}
-                  \PY{n}{hx} \PY{o}{=} \PY{n}{a2}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2}\PY{p}{)}
-                  \PY{k}{return} \PY{n}{hx}
-              
-              \PY{k}{def} \PY{n+nf}{train}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{iterations}\PY{p}{,} \PY{n}{step}\PY{p}{,} \PY{n}{error}\PY{p}{)}\PY{p}{:}
-                  \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{iterations}\PY{p}{)}\PY{p}{:}
-                      \PY{n}{i} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randrange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{)}
-                      \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{X}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,} \PY{n}{Y}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{c}{\PYZsh{} x and y are both row vectors}
-          
-                      \PY{n}{a2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{tanh}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1}\PY{p}{)}\PY{p}{)}
-                      \PY{n}{a2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{a2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
-                      \PY{n}{hx} \PY{o}{=} \PY{n}{a2}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2}\PY{p}{)}
-                      \PY{n}{d3} \PY{o}{=} \PY{n}{error}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{hx}\PY{p}{)}
-          
-                      \PY{n}{dJdW2} \PY{o}{=} \PY{o}{\PYZhy{}} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{a2}\PY{o}{.}\PY{n}{T}\PY{p}{,} \PY{n}{d3}\PY{p}{)}
-                      \PY{n}{dJdW1} \PY{o}{=} \PY{o}{\PYZhy{}} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{T}\PY{p}{,} \PY{n}{d3}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2}\PY{o}{.}\PY{n}{T}\PY{p}{)} \PY{o}{*} \PY{p}{(}\PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{a2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
-          
-                      \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2} \PY{o}{\PYZhy{}}\PY{o}{=} \PY{n}{step} \PY{o}{*} \PY{n}{dJdW2}
-                      \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1} \PY{o}{\PYZhy{}}\PY{o}{=} \PY{n}{step} \PY{o}{*} \PY{n}{dJdW1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-              
-              \PY{k}{def} \PY{n+nf}{predict}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{images}\PY{p}{)}\PY{p}{:}
-                  \PY{k}{return} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{forward}\PY{p}{(}\PY{n}{images}\PY{p}{)}\PY{o}{.}\PY{n}{flatten}\PY{p}{(}\PY{p}{)}
-                  
-              \PY{k}{def} \PY{n+nf}{score}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{data}\PY{p}{,} \PY{n}{labels}\PY{p}{)}\PY{p}{:}
-                  \PY{k}{return} \PY{n+nb}{sum}\PY{p}{(}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{data}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{labels}\PY{p}{)} \PY{o}{*}\PY{o}{*} \PY{l+m+mi}{2}\PY{p}{)}
-              
-              \PY{k}{def} \PY{n+nf}{save}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{filename}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{default}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
-                  \PY{n}{np}\PY{o}{.}\PY{n}{savez}\PY{p}{(}\PY{n}{filename}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2}\PY{p}{)}
-              
-              \PY{k}{def} \PY{n+nf}{load}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{filename}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{default}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
-                  \PY{n}{arrs} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{load}\PY{p}{(}\PY{n}{filename}\PY{p}{)}
-                  \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{W2} \PY{o}{=} \PY{n}{arrs}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{arr\PYZus{}0}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{arrs}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{arr\PYZus{}1}\PY{l+s}{\PYZsq{}}\PY{p}{]}
-          
-          \PY{k}{def} \PY{n+nf}{mean\PYZus{}squared\PYZus{}error}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{hx}\PY{p}{)}\PY{p}{:}
-              \PY{k}{return} \PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{hx}
-          
-          \PY{k}{def} \PY{n+nf}{cross\PYZus{}entropy\PYZus{}error}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{hx}\PY{p}{)}\PY{p}{:}
-              \PY{k}{return} \PY{n}{np}\PY{o}{.}\PY{n}{divide}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{hx}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{np}\PY{o}{.}\PY{n}{divide}\PY{p}{(}\PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{y}\PY{p}{,} \PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{hx}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}392}]:} \PY{c}{\PYZsh{} Train the neural net}
-          \PY{n}{scores} \PY{o}{=} \PY{p}{[}\PY{p}{]}
-          \PY{n}{Xp} \PY{o}{=} \PY{n}{sklearn}\PY{o}{.}\PY{n}{preprocessing}\PY{o}{.}\PY{n}{scale}\PY{p}{(}\PY{n}{X}\PY{p}{)}
-          \PY{n}{nn} \PY{o}{=} \PY{n}{NeuralNet}\PY{p}{(}\PY{p}{)}
-          \PY{k}{for} \PY{n}{\PYZus{}} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1000}\PY{p}{)}\PY{p}{:}
-              \PY{n}{nn}\PY{o}{.}\PY{n}{train}\PY{p}{(}\PY{n}{Xp}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{l+m+mi}{1000}\PY{p}{,} \PY{l+m+mf}{0.01}\PY{p}{,} \PY{n}{mean\PYZus{}squared\PYZus{}error}\PY{p}{)}
-              \PY{n}{scores}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{nn}\PY{o}{.}\PY{n}{score}\PY{p}{(}\PY{n}{Xp}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{)}
-          \PY{c}{\PYZsh{} nn.save()}
-          
-          \PY{c}{\PYZsh{} Plot RSS over iterations}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{scores}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Mean\PYZhy{}squared error as loss}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{RSS}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Iterations (thousands)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_14_0.png}
-    \end{center}
-    { \hspace*{\fill} \\}
     
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}394}]:} \PY{c}{\PYZsh{} Calculate regression sum of squares}
-          \PY{n}{RSS} \PY{o}{=} \PY{n}{nn}\PY{o}{.}\PY{n}{score}\PY{p}{(}\PY{n}{Xp}\PY{p}{,} \PY{n}{y}\PY{p}{)}
-          \PY{k}{print}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{RSS is}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{RSS}\PY{p}{)}
-\end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-RSS is 1790.37986983
-    \end{Verbatim}
+\pagebreak
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}395}]:} \PY{n}{predictions} \PY{o}{=} \PY{n}{nn}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{Xp}\PY{p}{)}
-          
-          \PY{c}{\PYZsh{} Some interesting visualizations}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions vs Actual Scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{predictions}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{b,}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Actual scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Distributions of Scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{predictions}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Actual scores}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{upper left}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-          
-          \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Distribution of Errors}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{predictions} \PY{o}{\PYZhy{}} \PY{n}{y}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Deviation from predictions}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
+\subsection{Neural Net Analysis}\label{Neural Net Analysis}
+
+    
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_16_0.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_16_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_16_1.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_16_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{proj_files/proj_16_2.png}
+    \adjustimage{max size={0.5\linewidth}{0.5\paperheight}}{proj_files/proj_16_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
